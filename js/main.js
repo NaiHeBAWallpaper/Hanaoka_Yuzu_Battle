@@ -44,7 +44,8 @@ const subtitleLocales = {
 	Chinese: 'zh-Hans',
 	TraditionalChinese: 'zh-Hant',
 	Japanese: 'ja',
-	Korean: 'ko'
+	Korean: 'ko',
+	Thai: 'th'
 };
 let isVoicelinePlaying = false;
 
@@ -62,8 +63,8 @@ const AUDIO_DETAIL = [
                 "わたしが守り抜いた世界です。"
             ],
             English: [
-                "Look, Sensei.",
-                "This is the world I have fought to protect until the very end."
+                "Look around, Sensei.",
+                "This is the world I protected."
             ],
             Chinese: [
                 "请看，老师。",
@@ -71,12 +72,13 @@ const AUDIO_DETAIL = [
             ],
             TraditionalChinese: [
                 "請看，老師。",
-                "這就是我守護到最後一刻的世界。"
+                "這是我守護住的世界。"
             ],
             Korean: [
-                "이봐, 선생님",
-                "이것은 내가 끝까지 지키기 위해 싸웠던 세상입니다."
-            ]
+                "이곳을 보세요, 선생님.",
+                "제가 지켜낸 세계예요."
+            ],
+            Thai: ["ดูตรงนี้สิคะ คุณครู","โลกที่ฉันปกป้องไว้ค่ะ"]
         }
     },
     {
@@ -86,21 +88,22 @@ const AUDIO_DETAIL = [
                 "この光景を見たのは、わたしだけじゃないって。"
             ],
             English: [
-                "...Of course, I understand.",
-                "I'm not the only one who witnessed this sight."
+                "...I understand, of course.",
+                "I know that I'm not the only one to have seen this view."
             ],
             Chinese: [
                 "……当然，我很清楚。",
                 "见证了这一景象的人，并不只有我一个。"
             ],
             TraditionalChinese: [
-                "……當然，我很清楚。",
-                "見證了這一景象的人，並不只有我一個。"
+                "……當然，我知道。",
+                "見過這片光景的，並不只有我一個人。"
             ],
             Korean: [
-                "물론 이해해요",
-                "저는 이 시야를 목격한 유일한 사람이 아닙니다."
-            ]
+                "……물론 알고 있어요.",
+                "지금 이 풍경을 본 사람이, 저만은 아니라는 걸."
+            ],
+            Thai: ["ฉันรู้อยู่แล้วค่ะ...","ว่าคนที่เห็นทิวทัศน์ในตอนนี้ ไม่ได้มีแค่ฉันคนเดียว"]
         }
     },
     {
@@ -110,21 +113,22 @@ const AUDIO_DETAIL = [
                 "今この瞬間が、ゲームが。わたしたちの現実だって。"
             ],
             English: [
-                "Back at the tournament, you said something like this...",
-                "That this very moment—and this game—is our reality."
+                "Back at that gaming tournament, you said something like this, didn't you?",
+                "That this moment, this game, is our reality."
             ],
             Chinese: [
                 "在决赛那天，您曾这样说过吧。",
                 "每一个瞬间，每一场游戏……就是属于我们的“现实”。"
             ],
             TraditionalChinese: [
-                "在決賽那天，您曾這樣說過吧。",
-                "每一個瞬間，每一場遊戲……就是屬於我們的“現實”。"
+                "大會的時候，你曾經這麼說過吧。",
+                "現在這個瞬間、這款遊戲──就是我們的現實。"
             ],
             Korean: [
-                "토너먼트에서 이런 말을 했지",
-                "바로 이 순간과 이 게임은 우리의 현실입니다."
-            ]
+                "저번 게임 대회 때 이런 말씀을 해주셨었죠.",
+                "지금 이 순간이, 이 게임이, 우리들의 현실이라고."
+            ],
+            Thai: ["ตอนแข่งเกมเมื่อครั้งที่แล้ว คุณครูก็เคยบอกเอาไว้นี่คะ","ว่าช่วงเวลานี้ ว่าเกมเกมนี้ คือความจริงของพวกเรา"]
         }
     },
     {
@@ -134,21 +138,22 @@ const AUDIO_DETAIL = [
                 "この世界のみんなが、同じシナリオを歩むとしても……。"
             ],
             English: [
-                "So, even if this world has a predetermined ending...",
-                "Even if everyone in this world is bound to follow the same script..."
+                "So, even if this world has a predetermined ending,",
+                "even if everyone in this world follows the same scenario,"
             ],
             Chinese: [
                 "所以，即便这是一个结局早已注定的世界……",
                 "即便这个世界里的所有人，都在走向同样的“剧本”……"
             ],
             TraditionalChinese: [
-                "所以，即便這是一個結局早已註定的世界……",
-                "即便這個世界裡的所有人，都在走向同樣的“劇本”……"
+                "所以，即使是結局已定的世界……",
+                "即使這個世界的大家，都走著相同的劇本……"
             ],
             Korean: [
-                "그래서, 이 세상이 미리 결정된 종말을 가졌다고 해도...",
-                "이 세상 모든 사람이 같은 시나리오를 따라야 할지라도"
-            ]
+                "그러니, 설령 엔딩이 정해진 세계라고 하더라도",
+                "이 세계의 모두가, 같은 시나리오를 걷는다 하더라도"
+            ],
+            Thai: ["เพราะงั้น แม้ว่าจะเป็นโลก ที่ถูกกำหนดตอนจบเอาไว้แล้วก็ตาม","แม้ทุกคนในโลกนี้ จะเดินไปตามเรื่องราวเดียวกันก็ตาม"]
         }
     },
     {
@@ -158,21 +163,22 @@ const AUDIO_DETAIL = [
                 "間違いなく、本物なんです。"
             ],
             English: [
-                "The choices I've made, and these feelings within me...",
-                "They are, without a doubt, real."
+                "The choices I make, these emotions...",
+                "Without a doubt, they are all real."
             ],
             Chinese: [
                 "我所做出的选择，还有这份真切的感情……",
                 "都毫无疑问，是真实存在的。"
             ],
             TraditionalChinese: [
-                "我所做出的選擇，還有這份真切的感情……",
-                "都毫無疑問，是真實存在的。"
+                "我所做過的選擇、這份感情……",
+                "毫無疑問，是真實的。"
             ],
             Korean: [
-                "내가 한 선택과 내 내면의 감정...",
-                "그들은 의심할 여지 없이 진짜입니다."
-            ]
+                "제가 내렸던 선택들은, 이 감정은…….",
+                "틀림없이, 진짜일 거예요."
+            ],
+            Thai: ["แต่สิ่งที่ฉันเลือกมาตลอด... กับความรู้สึกนี้...","คือเรื่องจริงไม่ผิดอย่างแน่นอนค่ะ"]
         }
     }
 ];
@@ -284,7 +290,7 @@ function playVoiceline() {
 			track.play().catch(finish);
 
 			if (dialogBox) {
-				textbox.textContent = dialog[window.selectedLanguage][index];
+				textbox.textContent = getSubtitleText(dialog, window.selectedLanguage, index);
 				textbox.style.opacity = 1;
 			}
 		},
@@ -459,6 +465,16 @@ function setMouse(event) {
 	return { x: ax - canvas.width * positionX, y: ay - canvas.height * positionY };
 }
 
+function getSubtitleText(dialog, language, index) {
+	let text = dialog?.[language]?.[index];
+	if (text == null && language === 'Thai') {
+		language = 'English';
+		text = dialog?.[language]?.[index];
+	}
+	textbox.lang = subtitleLocales[language];
+	return text ?? "";
+}
+
 function updateSubtitleLanguage() {
 	let language = subtitleLanguagePreference;
 	if (language === 'auto') {
@@ -472,6 +488,8 @@ function updateSubtitleLanguage() {
 			language = 'Japanese';
 		} else if (primary === 'ko' || primary === 'korean' || primary === 'koreana') {
 			language = 'Korean';
+		} else if (primary === 'th' || primary === 'thai') {
+			language = 'Thai';
 		} else {
 			language = 'English';
 		}
@@ -481,7 +499,7 @@ function updateSubtitleLanguage() {
 	window.selectedLanguage = language;
 	textbox.lang = subtitleLocales[language];
 	const clip = currentTracks.at(-1);
-	if (dialogBox && clip) textbox.textContent = clip.dialog[language][clip.index];
+	if (dialogBox && clip) textbox.textContent = getSubtitleText(clip.dialog, language, clip.index);
 }
 
 function init() {
